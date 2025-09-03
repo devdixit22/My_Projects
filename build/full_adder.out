@@ -1,0 +1,57 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_00000223ac84d340 .scope module, "full_adder" "full_adder" 2 12;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "Cout";
+L_00000223ac9075b0 .functor OR 1, L_00000223ac94fde0, L_00000223ac94ff50, C4<0>, C4<0>;
+o00000223ac90b138 .functor BUFZ 1, C4<z>; HiZ drive
+v00000223ac94faf0_0 .net "Cin", 0 0, o00000223ac90b138;  0 drivers
+v00000223ac94fb90_0 .net "Cout", 0 0, L_00000223ac9075b0;  1 drivers
+o00000223ac90afb8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000223ac94fc30_0 .net "a", 0 0, o00000223ac90afb8;  0 drivers
+o00000223ac90afe8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000223ac94fcd0_0 .net "b", 0 0, o00000223ac90afe8;  0 drivers
+v00000223ac906440_0 .net "s", 0 0, L_00000223ac94fe50;  1 drivers
+v00000223ac905ea0_0 .net "t1", 0 0, L_00000223ac94fd70;  1 drivers
+v00000223ac905c20_0 .net "t2", 0 0, L_00000223ac94fde0;  1 drivers
+v00000223ac906120_0 .net "t3", 0 0, L_00000223ac94ff50;  1 drivers
+S_00000223ac84d4d0 .scope module, "M0" "half_adder" 2 20, 2 1 0, S_00000223ac84d340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_00000223ac94fd70 .functor XOR 1, o00000223ac90afb8, o00000223ac90afe8, C4<0>, C4<0>;
+L_00000223ac94fde0 .functor AND 1, o00000223ac90afb8, o00000223ac90afe8, C4<1>, C4<1>;
+v00000223ac847830_0 .net "a", 0 0, o00000223ac90afb8;  alias, 0 drivers
+v00000223ac84bf40_0 .net "b", 0 0, o00000223ac90afe8;  alias, 0 drivers
+v00000223ac8473b0_0 .net "c", 0 0, L_00000223ac94fde0;  alias, 1 drivers
+v00000223ac8478d0_0 .net "s", 0 0, L_00000223ac94fd70;  alias, 1 drivers
+S_00000223ac94f820 .scope module, "M1" "half_adder" 2 21, 2 1 0, S_00000223ac84d340;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_00000223ac94fe50 .functor XOR 1, L_00000223ac94fd70, o00000223ac90b138, C4<0>, C4<0>;
+L_00000223ac94ff50 .functor AND 1, L_00000223ac94fd70, o00000223ac90b138, C4<1>, C4<1>;
+v00000223ac84d660_0 .net "a", 0 0, L_00000223ac94fd70;  alias, 1 drivers
+v00000223ac84d700_0 .net "b", 0 0, o00000223ac90b138;  alias, 0 drivers
+v00000223ac94f9b0_0 .net "c", 0 0, L_00000223ac94ff50;  alias, 1 drivers
+v00000223ac94fa50_0 .net "s", 0 0, L_00000223ac94fe50;  alias, 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "full_adder.v";

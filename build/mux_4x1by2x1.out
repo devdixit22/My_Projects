@@ -1,0 +1,89 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000013fd87da100 .scope module, "mux_4x1" "mux_4x1" 2 16;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+o0000013fd87db5c8 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000013fd8826b80_0 .net "in", 3 0, o0000013fd87db5c8;  0 drivers
+v0000013fd8825be0_0 .net "out", 0 0, L_0000013fd88272e0;  1 drivers
+o0000013fd87db5f8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000013fd8825640_0 .net "sel", 1 0, o0000013fd87db5f8;  0 drivers
+v0000013fd88267c0_0 .net "t", 1 0, L_0000013fd8826040;  1 drivers
+L_0000013fd8825fa0 .part o0000013fd87db5c8, 0, 2;
+L_0000013fd8826860 .part o0000013fd87db5f8, 0, 1;
+L_0000013fd8826ea0 .part o0000013fd87db5c8, 2, 2;
+L_0000013fd88256e0 .part o0000013fd87db5f8, 0, 1;
+L_0000013fd8826040 .concat8 [ 1 1 0 0], L_0000013fd87cd9a0, L_0000013fd8827580;
+L_0000013fd8825320 .part o0000013fd87db5f8, 1, 1;
+S_0000013fd87da290 .scope module, "M0" "mux_2x1" 2 23, 3 17 0, S_0000013fd87da100;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+L_0000013fd87a69c0 .functor NOT 1, L_0000013fd8826860, C4<0>, C4<0>, C4<0>;
+L_0000013fd87a6e10 .functor AND 1, L_0000013fd8826220, L_0000013fd87a69c0, C4<1>, C4<1>;
+L_0000013fd87a6ca0 .functor AND 1, L_0000013fd88251e0, L_0000013fd8826860, C4<1>, C4<1>;
+L_0000013fd87cd9a0 .functor OR 1, L_0000013fd87a6e10, L_0000013fd87a6ca0, C4<0>, C4<0>;
+v0000013fd87cc100_0 .net *"_ivl_1", 0 0, L_0000013fd8826220;  1 drivers
+v0000013fd87cc560_0 .net *"_ivl_3", 0 0, L_0000013fd88251e0;  1 drivers
+v0000013fd87cc1a0_0 .net "in", 1 0, L_0000013fd8825fa0;  1 drivers
+v0000013fd87cc740_0 .net "out", 0 0, L_0000013fd87cd9a0;  1 drivers
+v0000013fd87cc7e0_0 .net "sel", 0 0, L_0000013fd8826860;  1 drivers
+v0000013fd87cc060_0 .net "t1", 0 0, L_0000013fd87a69c0;  1 drivers
+v0000013fd87cc600_0 .net "t2", 0 0, L_0000013fd87a6e10;  1 drivers
+v0000013fd87cc240_0 .net "t3", 0 0, L_0000013fd87a6ca0;  1 drivers
+L_0000013fd8826220 .part L_0000013fd8825fa0, 0, 1;
+L_0000013fd88251e0 .part L_0000013fd8825fa0, 1, 1;
+S_0000013fd87d8370 .scope module, "M1" "mux_2x1" 2 24, 3 17 0, S_0000013fd87da100;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+L_0000013fd87d8690 .functor NOT 1, L_0000013fd88256e0, C4<0>, C4<0>, C4<0>;
+L_0000013fd8827350 .functor AND 1, L_0000013fd8825d20, L_0000013fd87d8690, C4<1>, C4<1>;
+L_0000013fd8827120 .functor AND 1, L_0000013fd8825280, L_0000013fd88256e0, C4<1>, C4<1>;
+L_0000013fd8827580 .functor OR 1, L_0000013fd8827350, L_0000013fd8827120, C4<0>, C4<0>;
+v0000013fd87cc420_0 .net *"_ivl_1", 0 0, L_0000013fd8825d20;  1 drivers
+v0000013fd87cc2e0_0 .net *"_ivl_3", 0 0, L_0000013fd8825280;  1 drivers
+v0000013fd87cc380_0 .net "in", 1 0, L_0000013fd8826ea0;  1 drivers
+v0000013fd87ccce0_0 .net "out", 0 0, L_0000013fd8827580;  1 drivers
+v0000013fd87ccba0_0 .net "sel", 0 0, L_0000013fd88256e0;  1 drivers
+v0000013fd87cc9c0_0 .net "t1", 0 0, L_0000013fd87d8690;  1 drivers
+v0000013fd87ccc40_0 .net "t2", 0 0, L_0000013fd8827350;  1 drivers
+v0000013fd87ccb00_0 .net "t3", 0 0, L_0000013fd8827120;  1 drivers
+L_0000013fd8825d20 .part L_0000013fd8826ea0, 0, 1;
+L_0000013fd8825280 .part L_0000013fd8826ea0, 1, 1;
+S_0000013fd87d8500 .scope module, "M3" "mux_2x1" 2 25, 3 17 0, S_0000013fd87da100;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+L_0000013fd8827190 .functor NOT 1, L_0000013fd8825320, C4<0>, C4<0>, C4<0>;
+L_0000013fd8827510 .functor AND 1, L_0000013fd88258c0, L_0000013fd8827190, C4<1>, C4<1>;
+L_0000013fd8827660 .functor AND 1, L_0000013fd88262c0, L_0000013fd8825320, C4<1>, C4<1>;
+L_0000013fd88272e0 .functor OR 1, L_0000013fd8827510, L_0000013fd8827660, C4<0>, C4<0>;
+v0000013fd87ccd80_0 .net *"_ivl_1", 0 0, L_0000013fd88258c0;  1 drivers
+v0000013fd87cbfc0_0 .net *"_ivl_3", 0 0, L_0000013fd88262c0;  1 drivers
+v0000013fd8825e60_0 .net "in", 1 0, L_0000013fd8826040;  alias, 1 drivers
+v0000013fd8825c80_0 .net "out", 0 0, L_0000013fd88272e0;  alias, 1 drivers
+v0000013fd8826c20_0 .net "sel", 0 0, L_0000013fd8825320;  1 drivers
+v0000013fd8826540_0 .net "t1", 0 0, L_0000013fd8827190;  1 drivers
+v0000013fd8825a00_0 .net "t2", 0 0, L_0000013fd8827510;  1 drivers
+v0000013fd8825460_0 .net "t3", 0 0, L_0000013fd8827660;  1 drivers
+L_0000013fd88258c0 .part L_0000013fd8826040, 0, 1;
+L_0000013fd88262c0 .part L_0000013fd8826040, 1, 1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_4x1by2x1.v";
+    "./mux_2x1.v";

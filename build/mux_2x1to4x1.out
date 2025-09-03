@@ -1,0 +1,35 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_0000018f12a16fb0 .scope module, "mux_2x1" "mux_2x1" 2 17;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "sel";
+    .port_info 2 /OUTPUT 1 "out";
+o0000018f12a579a8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000018f12a173c0 .functor NOT 1, o0000018f12a579a8, C4<0>, C4<0>, C4<0>;
+L_0000018f12a1ef60 .functor AND 1, L_0000018f12a1be10, L_0000018f12a173c0, C4<1>, C4<1>;
+L_0000018f12a17750 .functor AND 1, L_0000018f12a1beb0, o0000018f12a579a8, C4<1>, C4<1>;
+L_0000018f12a1bf50 .functor OR 1, L_0000018f12a1ef60, L_0000018f12a17750, C4<0>, C4<0>;
+v0000018f12a178c0_0 .net *"_ivl_1", 0 0, L_0000018f12a1be10;  1 drivers
+v0000018f12a17140_0 .net *"_ivl_3", 0 0, L_0000018f12a1beb0;  1 drivers
+o0000018f12a57948 .functor BUFZ 2, C4<zz>; HiZ drive
+v0000018f12a171e0_0 .net "in", 1 0, o0000018f12a57948;  0 drivers
+v0000018f12a17280_0 .net "out", 0 0, L_0000018f12a1bf50;  1 drivers
+v0000018f12a17320_0 .net "sel", 0 0, o0000018f12a579a8;  0 drivers
+v0000018f12a1bc30_0 .net "t1", 0 0, L_0000018f12a173c0;  1 drivers
+v0000018f12a1bcd0_0 .net "t2", 0 0, L_0000018f12a1ef60;  1 drivers
+v0000018f12a1bd70_0 .net "t3", 0 0, L_0000018f12a17750;  1 drivers
+L_0000018f12a1be10 .part o0000018f12a57948, 0, 1;
+L_0000018f12a1beb0 .part o0000018f12a57948, 1, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux_2x1to4x1.v";
