@@ -10,7 +10,7 @@ initial begin
     $dumpfile("full_adder.vcd");
     $dumpvars(0, F_A_test);
     $monitor($time, "A=%b, B=%b, Ci=%b, S=%b, Co=%b", A,B,Ci,S,Co);
-    #5 A = 1'b0; B=1'b0; Ci=1'b0;
+       A = 1'b0; B=1'b0; Ci=1'b0;
     #5 A = 1'b0; B=1'b0; Ci=1'b1;
     #5 A = 1'b0; B=1'b1; Ci=1'b0;
     #5 A = 1'b0; B=1'b1; Ci=1'b1;
