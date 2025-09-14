@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/HP/Desktop/RISCV_Project/RISC-V_CPU_Core/RISC-V_CPU_Core.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+C:/Users/HP/Desktop/RISCV_Project/control_hazard.v,1757867896,verilog,,C:/Users/HP/Desktop/RISCV_Project/cpu_components.v,,control_unit;forwarding_unit;hazard_detection_unit,,,,,,,,
+C:/Users/HP/Desktop/RISCV_Project/cpu_components.v,1757867677,verilog,,C:/Users/HP/Desktop/RISCV_Project/pipeline_registers.v,,alu;data_memory;immediate_generator;instruction_memory;pc_register;register_file,,,,,,,,
+C:/Users/HP/Desktop/RISCV_Project/pipeline_registers.v,1757867665,verilog,,C:/Users/HP/Desktop/RISCV_Project/riscv_core.v,,ex_mem_register;id_ex_register;if_id_register;mem_wb_register,,,,,,,,
+C:/Users/HP/Desktop/RISCV_Project/riscv_core.v,1757867637,verilog,,C:/Users/HP/Desktop/RISCV_Project/tb_riscv_core.v,,riscv_core,,,,,,,,
+C:/Users/HP/Desktop/RISCV_Project/tb_riscv_core.v,1757867716,verilog,,,,tb_riscv_core,,,,,,,,
